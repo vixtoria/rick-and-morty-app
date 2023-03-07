@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FilterCell" id="755-9z-MIt" customClass="FilterCell" customModule="RickAndMorty" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="169" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="EpH-Gh-bkE">
+                <rect key="frame" x="0.0" y="0.0" width="169" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="alh-JZ-UnX" customClass="StyledView" customModule="RickAndMorty" customModuleProvider="target">
+                        <rect key="frame" x="5" y="5" width="154" height="40"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aasdas" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T43-Pn-t6Z">
+                                <rect key="frame" x="15" y="0.0" width="124" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="CjZ-NW-V3d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="12"/>
+                                <color key="textColor" name="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="regularGreen"/>
+                        <constraints>
+                            <constraint firstItem="T43-Pn-t6Z" firstAttribute="top" secondItem="alh-JZ-UnX" secondAttribute="top" id="8pG-ns-13e"/>
+                            <constraint firstAttribute="trailing" secondItem="T43-Pn-t6Z" secondAttribute="trailing" constant="15" id="BHN-fZ-j2h"/>
+                            <constraint firstAttribute="bottom" secondItem="T43-Pn-t6Z" secondAttribute="bottom" id="dS6-2V-WyT"/>
+                            <constraint firstItem="T43-Pn-t6Z" firstAttribute="leading" secondItem="alh-JZ-UnX" secondAttribute="leading" constant="15" id="oyr-Js-he7"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="7"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="0.5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColour">
+                                <color key="value" name="borderColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="alh-JZ-UnX" secondAttribute="trailing" constant="10" id="LUy-dd-Hv6"/>
+                    <constraint firstItem="alh-JZ-UnX" firstAttribute="leading" secondItem="EpH-Gh-bkE" secondAttribute="leading" constant="5" id="OKv-Bv-R1f"/>
+                    <constraint firstAttribute="bottom" secondItem="alh-JZ-UnX" secondAttribute="bottom" constant="5" id="U3X-gR-XWs"/>
+                    <constraint firstItem="alh-JZ-UnX" firstAttribute="top" secondItem="EpH-Gh-bkE" secondAttribute="top" constant="5" id="iho-9R-Kea"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="169" height="50"/>
+            <connections>
+                <outlet property="containerView" destination="alh-JZ-UnX" id="lMy-rZ-y8A"/>
+                <outlet property="nameLabel" destination="T43-Pn-t6Z" id="WCm-qa-ATg"/>
+            </connections>
+            <point key="canvasLocation" x="-210.86956521739131" y="-131.25"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="borderColor">
+            <color red="0.12156862745098039" green="0.34901960784313724" blue="0.054901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightTextColor">
+            <color red="0.82352941176470584" green="0.98039215686274506" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="regularGreen">
+            <color red="0.066666666666666666" green="0.17647058823529413" blue="0.047058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

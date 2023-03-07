@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="RickAndMorty" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="rJK-dQ-1XW" id="Mbe-bl-34S"/>
+                <outlet property="filterView" destination="oX5-xl-iWM" id="XBh-h1-tzg"/>
+                <outlet property="searchTextField" destination="QXB-Ax-5ug" id="2vl-jS-yLo"/>
+                <outlet property="view" destination="iN0-l3-epB" id="6W8-G7-VGA"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JzJ-VX-UDu">
+                    <rect key="frame" x="0.0" y="44" width="414" height="95"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oX5-xl-iWM" customClass="FilterView" customModule="RickAndMorty" customModuleProvider="target">
+                            <rect key="frame" x="24" y="27" width="366" height="50"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxA-AC-bZm">
+                                    <rect key="frame" x="319" y="7.5" width="36" height="35"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="35" id="3RG-F8-Itk"/>
+                                        <constraint firstAttribute="width" constant="36" id="dQF-ix-34D"/>
+                                    </constraints>
+                                    <color key="tintColor" name="lightGreen"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" imagePadding="10">
+                                        <imageReference key="image" image="line.horizontal.3.decrease" catalog="system" symbolScale="large" renderingMode="template"/>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="default"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="filterButtonTapped:" destination="oX5-xl-iWM" eventType="touchUpInside" id="mNI-q2-0GH"/>
+                                    </connections>
+                                </button>
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgT-rc-Se1">
+                                    <rect key="frame" x="290" y="10" width="24" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="24" id="ccg-P9-mNh"/>
+                                        <constraint firstAttribute="height" constant="30" id="wo5-xp-dzQ"/>
+                                    </constraints>
+                                    <color key="tintColor" name="lightGreen"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" imagePadding="10">
+                                        <imageReference key="image" image="xmark" catalog="system" symbolScale="small" renderingMode="template"/>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="default"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="clearButtonTapped:" destination="oX5-xl-iWM" eventType="touchUpInside" id="goU-cE-5F2"/>
+                                    </connections>
+                                </button>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="253" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Search.." placeholder="Search..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QXB-Ax-5ug">
+                                    <rect key="frame" x="46" y="13" width="236" height="24"/>
+                                    <color key="backgroundColor" name="regularGreen"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="24" id="GUf-f5-9Eu"/>
+                                    </constraints>
+                                    <color key="textColor" name="lightGreen"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                    <connections>
+                                        <action selector="didBeginEditing:" destination="oX5-xl-iWM" eventType="editingDidBegin" id="GeZ-08-TGU"/>
+                                        <action selector="didEndEditing:" destination="oX5-xl-iWM" eventType="editingDidEnd" id="afy-6D-S5F"/>
+                                        <action selector="searchFieldChanged:" destination="-1" eventType="editingChanged" id="BK2-a1-gN0"/>
+                                        <action selector="textFieldChanged:" destination="oX5-xl-iWM" eventType="editingChanged" id="new-9N-UOp"/>
+                                    </connections>
+                                </textField>
+                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWA-HT-SPR">
+                                    <rect key="frame" x="15" y="18.5" width="20" height="13"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="20" id="G0l-4m-aak"/>
+                                        <constraint firstAttribute="height" constant="13" id="cdP-qE-4zK"/>
+                                    </constraints>
+                                    <color key="tintColor" name="lightGreen"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" imagePadding="10">
+                                        <imageReference key="image" image="magnifyingglass" catalog="system" symbolScale="medium" renderingMode="template"/>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="default"/>
+                                    </buttonConfiguration>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" name="regularGreen"/>
+                            <constraints>
+                                <constraint firstItem="gxA-AC-bZm" firstAttribute="leading" secondItem="sgT-rc-Se1" secondAttribute="trailing" constant="5" id="0Ou-73-BP4"/>
+                                <constraint firstItem="QXB-Ax-5ug" firstAttribute="leading" secondItem="fWA-HT-SPR" secondAttribute="trailing" constant="11" id="4rG-oy-JyB"/>
+                                <constraint firstItem="gxA-AC-bZm" firstAttribute="centerY" secondItem="oX5-xl-iWM" secondAttribute="centerY" id="B5K-Yc-vSp"/>
+                                <constraint firstAttribute="height" constant="50" id="FlB-lS-7ou"/>
+                                <constraint firstItem="fWA-HT-SPR" firstAttribute="centerY" secondItem="oX5-xl-iWM" secondAttribute="centerY" id="IBW-20-QbH"/>
+                                <constraint firstItem="sgT-rc-Se1" firstAttribute="centerY" secondItem="oX5-xl-iWM" secondAttribute="centerY" id="ard-mk-yc8"/>
+                                <constraint firstItem="fWA-HT-SPR" firstAttribute="leading" secondItem="oX5-xl-iWM" secondAttribute="leading" constant="15" id="fvk-rA-Zjz"/>
+                                <constraint firstItem="QXB-Ax-5ug" firstAttribute="centerY" secondItem="oX5-xl-iWM" secondAttribute="centerY" id="lx2-qr-ogh"/>
+                                <constraint firstAttribute="trailing" secondItem="gxA-AC-bZm" secondAttribute="trailing" constant="11" id="s1V-YC-61C"/>
+                                <constraint firstItem="sgT-rc-Se1" firstAttribute="leading" secondItem="QXB-Ax-5ug" secondAttribute="trailing" constant="8" id="xAM-7X-tDB"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                    <size key="value" width="0.0" height="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                    <real key="value" value="7"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColour">
+                                    <color key="value" name="lightGreen"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="clearButton" destination="sgT-rc-Se1" id="P4a-l2-2Kx"/>
+                                <outlet property="filterButton" destination="gxA-AC-bZm" id="z1p-Y1-sV7"/>
+                                <outlet property="textField" destination="QXB-Ax-5ug" id="6iv-x4-rAA"/>
+                            </connections>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="oX5-xl-iWM" secondAttribute="trailing" constant="24" id="NSk-QJ-lu1"/>
+                        <constraint firstAttribute="bottom" secondItem="oX5-xl-iWM" secondAttribute="bottom" constant="18" id="aWU-gr-Ja8"/>
+                        <constraint firstAttribute="height" constant="95" id="c0p-x1-dKi"/>
+                        <constraint firstItem="oX5-xl-iWM" firstAttribute="leading" secondItem="JzJ-VX-UDu" secondAttribute="leading" constant="24" id="pLL-Ms-Khx"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Db5-iI-4L1">
+                    <rect key="frame" x="0.0" y="139" width="414" height="1"/>
+                    <color key="backgroundColor" name="regularGreen"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="GsE-kC-oi4"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="rJK-dQ-1XW">
+                    <rect key="frame" x="16" y="140" width="382" height="722"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="nea-DE-ElE">
+                        <size key="itemSize" width="0.0" height="0.0"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" name="darkGreen"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Db5-iI-4L1" secondAttribute="trailing" id="1LI-M3-MPg"/>
+                <constraint firstItem="rJK-dQ-1XW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="I9l-1L-A6O"/>
+                <constraint firstItem="JzJ-VX-UDu" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="NMC-sx-Mcx"/>
+                <constraint firstItem="rJK-dQ-1XW" firstAttribute="top" secondItem="Db5-iI-4L1" secondAttribute="bottom" id="TEW-st-AB4"/>
+                <constraint firstItem="Db5-iI-4L1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="WgX-Se-QgD"/>
+                <constraint firstItem="Db5-iI-4L1" firstAttribute="top" secondItem="JzJ-VX-UDu" secondAttribute="bottom" id="YET-7E-wRG"/>
+                <constraint firstItem="JzJ-VX-UDu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Yum-ks-EOz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rJK-dQ-1XW" secondAttribute="trailing" constant="16" id="fMn-fe-bm2"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="rJK-dQ-1XW" secondAttribute="bottom" id="v7t-uy-7i3"/>
+                <constraint firstItem="JzJ-VX-UDu" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="zUX-5P-Ar4"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="line.horizontal.3.decrease" catalog="system" width="128" height="73"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="darkGreen">
+            <color red="0.035294117647058823" green="0.10588235294117647" blue="0.015686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightGreen">
+            <color red="0.29803921568627451" green="0.69019607843137254" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="regularGreen">
+            <color red="0.066666666666666666" green="0.17647058823529413" blue="0.047058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

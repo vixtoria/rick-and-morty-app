@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FilterModal" customModule="RickAndMorty" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="xqp-0I-uOW" id="nh3-fk-Ax6"/>
+                <outlet property="gendersCollectionView" destination="KaK-zk-xyr" id="e52-XG-EJl"/>
+                <outlet property="gestureView" destination="28D-81-JJM" id="6B8-i3-XRh"/>
+                <outlet property="statusCollectionView" destination="62L-jd-oN2" id="5YT-1K-8EE"/>
+                <outlet property="view" destination="iN0-l3-epB" id="G1U-ov-80U"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xqp-0I-uOW" customClass="StyledView" customModule="RickAndMorty" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="492" width="414" height="370"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="28D-81-JJM" customClass="StyledView" customModule="RickAndMorty" customModuleProvider="target">
+                            <rect key="frame" x="157" y="20" width="100" height="5"/>
+                            <color key="backgroundColor" name="borderColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="6cn-Yq-P2x"/>
+                                <constraint firstAttribute="height" constant="5" id="LDI-tp-j81"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffj-ub-82g">
+                            <rect key="frame" x="25" y="55" width="364" height="27.5"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="55" id="y74-NS-Pve"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="20"/>
+                            <color key="textColor" name="lightGreen"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="KaK-zk-xyr">
+                            <rect key="frame" x="25" y="89.5" width="364" height="55"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="bGZ-Vf-kiI"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="x2A-VV-HNb">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ja6-Ol-83g">
+                            <rect key="frame" x="25" y="151.5" width="364" height="27.5"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="55" id="do2-MQ-WF8"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="20"/>
+                            <color key="textColor" name="lightGreen"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="62L-jd-oN2">
+                            <rect key="frame" x="25" y="186" width="364" height="55"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="Nle-cP-0hg"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ezj-WZ-DM7">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vrn-3B-esA" customClass="StyledButton" customModule="RickAndMorty" customModuleProvider="target">
+                            <rect key="frame" x="50" y="271" width="314" height="40"/>
+                            <color key="backgroundColor" name="borderColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="C0u-n0-uJE"/>
+                            </constraints>
+                            <color key="tintColor" name="lightTextColor"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="FILTER">
+                                <fontDescription key="titleFontDescription" name="Avenir-Black" family="Avenir" pointSize="15"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColour">
+                                    <color key="value" name="darkGreen"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="filterButtonTapped:" destination="-1" eventType="touchUpInside" id="0zh-zN-ZTU"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="darkGreen"/>
+                    <constraints>
+                        <constraint firstItem="Vrn-3B-esA" firstAttribute="top" secondItem="62L-jd-oN2" secondAttribute="bottom" constant="30" id="3DE-ZT-Vtc"/>
+                        <constraint firstItem="Vrn-3B-esA" firstAttribute="leading" secondItem="xqp-0I-uOW" secondAttribute="leading" constant="50" id="B3j-iC-DU0"/>
+                        <constraint firstItem="62L-jd-oN2" firstAttribute="top" secondItem="ja6-Ol-83g" secondAttribute="bottom" constant="7" id="BUh-WQ-6sG"/>
+                        <constraint firstItem="KaK-zk-xyr" firstAttribute="leading" secondItem="xqp-0I-uOW" secondAttribute="leading" constant="25" id="MFP-p6-4Ct"/>
+                        <constraint firstItem="ja6-Ol-83g" firstAttribute="top" secondItem="KaK-zk-xyr" secondAttribute="bottom" constant="7" id="O6u-FR-OPb"/>
+                        <constraint firstAttribute="trailing" secondItem="ja6-Ol-83g" secondAttribute="trailing" constant="25" id="Pxo-5f-T1G"/>
+                        <constraint firstItem="ffj-ub-82g" firstAttribute="leading" secondItem="xqp-0I-uOW" secondAttribute="leading" constant="25" id="TJC-Uy-PIE"/>
+                        <constraint firstAttribute="height" constant="370" id="UbJ-pS-YQU"/>
+                        <constraint firstAttribute="trailing" secondItem="Vrn-3B-esA" secondAttribute="trailing" constant="50" id="WnT-FS-Fb4"/>
+                        <constraint firstAttribute="trailing" secondItem="62L-jd-oN2" secondAttribute="trailing" constant="25" id="c5d-0I-QvD"/>
+                        <constraint firstAttribute="trailing" secondItem="ffj-ub-82g" secondAttribute="trailing" constant="25" id="f2Z-9G-3ef"/>
+                        <constraint firstItem="ffj-ub-82g" firstAttribute="top" secondItem="28D-81-JJM" secondAttribute="bottom" constant="30" id="qL9-my-zmH"/>
+                        <constraint firstAttribute="trailing" secondItem="KaK-zk-xyr" secondAttribute="trailing" constant="25" id="qxa-hL-wRQ"/>
+                        <constraint firstItem="KaK-zk-xyr" firstAttribute="top" secondItem="ffj-ub-82g" secondAttribute="bottom" constant="7" id="rXc-dF-3qL"/>
+                        <constraint firstItem="62L-jd-oN2" firstAttribute="leading" secondItem="xqp-0I-uOW" secondAttribute="leading" constant="25" id="sV7-zt-IdK"/>
+                        <constraint firstItem="28D-81-JJM" firstAttribute="centerX" secondItem="xqp-0I-uOW" secondAttribute="centerX" id="tBs-Ol-SUb"/>
+                        <constraint firstItem="ja6-Ol-83g" firstAttribute="leading" secondItem="xqp-0I-uOW" secondAttribute="leading" constant="25" id="u6n-sm-BZf"/>
+                        <constraint firstItem="28D-81-JJM" firstAttribute="top" secondItem="xqp-0I-uOW" secondAttribute="top" constant="20" id="vKb-CZ-Zse"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="xqp-0I-uOW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="NUf-yH-bce"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="xqp-0I-uOW" secondAttribute="bottom" id="SHc-L2-4H1"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xqp-0I-uOW" secondAttribute="trailing" id="x3S-zx-KMx"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="52"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="borderColor">
+            <color red="0.12156862745098039" green="0.34901960784313724" blue="0.054901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="darkGreen">
+            <color red="0.035294117647058823" green="0.10588235294117647" blue="0.015686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightGreen">
+            <color red="0.29803921568627451" green="0.69019607843137254" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightTextColor">
+            <color red="0.82352941176470584" green="0.98039215686274506" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
