@@ -20,18 +20,18 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HPe-6Y-iq9">
-                    <rect key="frame" x="80" y="298" width="254" height="300"/>
+                    <rect key="frame" x="40" y="248" width="334" height="400"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="300" id="glc-fj-eez"/>
+                        <constraint firstAttribute="height" constant="400" id="glc-fj-eez"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" name="darkGreen"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="HPe-6Y-iq9" secondAttribute="trailing" constant="80" id="UNn-eS-Yhb"/>
-                <constraint firstItem="HPe-6Y-iq9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="80" id="mG6-Zq-2mj"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="HPe-6Y-iq9" secondAttribute="trailing" constant="40" id="UNn-eS-Yhb"/>
+                <constraint firstItem="HPe-6Y-iq9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="mG6-Zq-2mj"/>
                 <constraint firstItem="HPe-6Y-iq9" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="zdk-wY-N5c"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="82.366071428571431"/>

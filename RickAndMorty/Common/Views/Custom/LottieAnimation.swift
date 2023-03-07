@@ -13,7 +13,7 @@ class LottieAnimation {
     static var animationView: AnimationView?
     
     static func show(view: UIView, color: UIColor){
-        animationView = AnimationView(name: "morty", bundle: .local)
+        animationView = AnimationView(name: "gloot", bundle: .local)
         animationView?.contentMode = .scaleAspectFit
         animationView?.loopMode = .loop
         animationView?.animationSpeed = 1.3
