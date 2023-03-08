@@ -16,7 +16,7 @@ This is a Rick and Morty themed application consuming the Rick and Morty API
 - 📲 UIKit  
 - 🌐  URLSession  
 - 🤳 Lottie  
-- 🖼️ SDWebImage, Cached images  
+- 🖼️ SDWebImage 
 - ➕ More  
   
   
