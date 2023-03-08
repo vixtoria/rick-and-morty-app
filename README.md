@@ -10,6 +10,7 @@ This is a Rick and Morty themed application consuming the Rick and Morty API
 - ✅ Singleton  
 - ✅ Delegation  
 - ✅ Coordinator  
+- ✅ Dependency injection 
 
 #### Tech
 - 📲 UIKit  
